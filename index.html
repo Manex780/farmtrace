@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Farm Traceability System</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>🌱 Farm Traceability System</h1>
+  </header>
+
+  <section id="login">
+    <h2>Login</h2>
+    <input type="password" id="pin" placeholder="Enter PIN">
+    <button onclick="login()">Login</button>
+  </section>
+
+  <section id="dashboard" style="display:none;">
+    <h2>Dashboard</h2>
+
+    <div class="cards">
+      <div class="card">Weight: <span id="weight"></span></div>
+      <div class="card">Temperature: <span id="temp"></span></div>
+      <div class="card">Humidity: <span id="humidity"></span></div>
+    </div>
+
+    <canvas id="chart"></canvas>
+
+    <h3>Generate QR Passport</h3>
+    <button onclick="generateQR()">Generate QR</button>
+    <div id="qr"></div>
+
+    <h3>Farm Location</h3>
+    <div id="map"></div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
